@@ -4,26 +4,40 @@ public class Customer {
 
     // Customer details
     private String customerId;
-    private String fullName;
+    private String firstName;
+    private String lastName;
     private String phoneNumber;
     private String email;
 
     // Constructor
-    public Customer(String customerId, String fullName,
-                    String phoneNumber, String email) {
+    public Customer(String customerId,
+                    String firstName,
+                    String lastName,
+                    String phoneNumber,
+                    String email) {
+
         this.customerId = customerId;
-        this.fullName = fullName;
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.phoneNumber = phoneNumber;
         this.email = email;
     }
-    
-    //getters
+
+    // Getters
     public String getCustomerId() {
         return customerId;
     }
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
     public String getFullName() {
-        return fullName;
+        return firstName + " " + lastName;
     }
 
     public String getPhoneNumber() {
